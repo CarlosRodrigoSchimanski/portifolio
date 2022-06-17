@@ -1,3 +1,4 @@
+from distutils.log import debug
 from flask import Flask, render_template
 
 #teste a
@@ -9,4 +10,4 @@ def hospedagem():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
