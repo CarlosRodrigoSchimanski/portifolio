@@ -1,5 +1,5 @@
-const menuMobile = document.querySelector('.menu-mobile')
-const body = document.querySelector('body')
+const menuMobile = document.querySelector('.menu-mobile');
+const body = document.querySelector('body');
 
 menuMobile.addEventListener('click', () => {
     menuMobile.classList.contains('bi-list')
@@ -9,7 +9,7 @@ menuMobile.addEventListener('click', () => {
 })
 
 
-const navItem = document.querySelectorAll('.nav-item')
+const navItem = document.querySelectorAll('.nav-item');
 navItem.forEach(item => {
     item.addEventListener('click', () => {
         if (body.classList.contains('menu-nav-active')) {
@@ -17,4 +17,25 @@ navItem.forEach(item => {
             menuMobile.classList.replace('bi-x', 'bi-list');
         }
     })
+})
+
+
+const item = document.querySelectorAll("[data-anime]");
+
+const animeScroll = () => {
+  const windowTop = window.scrollY + window.innerHeight * 0.1 ;
+
+  item.forEach((element) => {
+    if (windowTop > element.scrollTop) {
+        element.classList.add("animate");
+    } else {
+        element.classList.remove("animate");
+    }
+  });
+};
+
+animeScroll();
+
+window.addEventListener("scroll", ()=>{
+  animeScroll();
 })
