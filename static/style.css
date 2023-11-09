@@ -218,6 +218,12 @@ i.menu-mobile {
     margin-bottom: -35px;
 }
 
+.carousel-control-prev, .carousel-control-next{
+    height: 10px;
+    top: auto;
+    bottom: -30px;
+}
+
 [data-anime] {
     opacity: 0;
     transition: 1s;
@@ -238,4 +244,28 @@ i.menu-mobile {
 [data-anime].animate {
     opacity: 1;
     transform: translate3d(0 ,0 ,0);
+}
+
+.item-contato{
+    font-size: 2.5em;
+    margin: 0.2em auto;
+}
+
+.item-contato a {
+    text-decoration: none;
+    color: black;
+}
+
+@media (min-width: 1024px) {
+    #footer{
+        padding: 15px;
+        color: rgb(184, 175, 175);
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 300px;
+        z-index: 9999;
+        transition: .3s;
+        font-size: 0.7em;
+    }
 }
